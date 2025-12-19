@@ -21,7 +21,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.login'); // here admin is the folder and login is the blade file
     }
 
     /**

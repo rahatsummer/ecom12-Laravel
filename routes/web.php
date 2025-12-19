@@ -10,7 +10,11 @@ Route::get('/', function () {
 
 
 Route::prefix('admin')->group(function () {
-    Route::resource('dashboard', AdminController::class)->only(['index']);
+
+    // Login form
+Route::get('login', [AdminController::class, 'create'])->name('admin.login');
+// Dashboard routes for admin
+Route::resource('dashboard', AdminController::class)->only(['index']);
     
     // ... other admin routes
 });
